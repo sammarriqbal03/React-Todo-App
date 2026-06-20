@@ -1,0 +1,343 @@
+/* ==========================
+   🌞 LIGHT MODE
+========================== */
+
+body {
+  background: #ffffff;
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+/* APP */
+.app {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #f8f9fb;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  color: #222;
+}
+
+/* HEADER */
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.header h1{
+  font-size:28px;
+  background:linear-gradient(90deg,#f6d365,#fda085);
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* Theme Button */
+
+.theme-btn{
+  width:48px;
+  height:48px;
+  border:none;
+  border-radius:50%;
+  background:#ececf2;
+  color:#222;
+  cursor:pointer;
+  font-size:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ==========================
+   TODO FORM
+========================== */
+
+.todo-form{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.todo-form input,
+.todo-form select{
+  flex:1;
+  padding:12px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  background:white;
+  color:#222;
+}
+
+.todo-form button{
+  padding:12px 20px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(45deg,#ff6b6b,#ee5a6f);
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* ==========================
+   FILTERS
+========================== */
+
+.filters{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.filters input,
+.filters select,
+.filters button{
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  background:white;
+  color:#222;
+}
+
+/* ==========================
+   STATS
+========================== */
+
+.stats{
+  display:flex;
+  justify-content:space-around;
+  padding:12px;
+  margin-bottom:20px;
+  border-radius:12px;
+  background:white;
+  border:1px solid #e5e5e5;
+}
+
+/* ==========================
+   TODO ITEM
+========================== */
+
+.todo-item{
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  /* 👇 little darker than app */
+  background:#eef2f7;
+
+  border:1px solid #dfe5ef;
+
+  padding:12px;
+
+  border-radius:12px;
+
+  margin-bottom:12px;
+
+  box-shadow:0 4px 10px rgba(0,0,0,.05);
+
+  transition:.3s;
+}
+
+.todo-item:hover{
+
+  background:#e7edf6;
+
+  transform:translateY(-2px);
+
+  box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+.todo-item span{
+  flex:1;
+}
+
+.todo-item.completed span{
+  text-decoration:line-through;
+  opacity:.6;
+}
+
+.todo-item input[type=text]{
+  flex:1;
+  padding:8px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+/* Priority */
+
+.priority{
+  padding:5px 10px;
+  border-radius:6px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.priority.high{
+  background:#ff6464;
+  color:white;
+}
+
+.priority.medium{
+  background:#f6d63f;
+  color:#222;
+}
+
+.priority.low{
+  background:#67c774;
+  color:white;
+}
+
+/* Icons */
+
+.icon-btn{
+
+  background:none;
+
+  border:none;
+
+  color:#333;
+
+  cursor:pointer;
+
+  font-size:18px;
+
+}
+
+.icon-btn:hover{
+
+  color:#ff6b6b;
+
+}
+
+/* Empty */
+
+.empty{
+  text-align:center;
+  padding:30px;
+  opacity:.7;
+}
+
+/* ==========================
+      🌙 DARK MODE
+========================== */
+
+body.dark{
+
+  background:#0b0d12;
+
+  color:white;
+
+}
+
+body.dark .app{
+
+  background:#181c26;
+
+  color:white;
+
+}
+
+/* Theme Button */
+
+body.dark .theme-btn{
+
+  background:#2d3342;
+
+  color:#ffd166;
+
+}
+
+/* Inputs */
+
+body.dark .todo-form input,
+body.dark .todo-form select,
+body.dark .filters input,
+body.dark .filters select,
+body.dark .filters button{
+
+  background:#2a3040;
+
+  color:white;
+
+  border:1px solid #40485a;
+
+}
+
+/* Stats */
+
+body.dark .stats{
+
+  background:#222837;
+
+  border:1px solid #3a4354;
+
+  color:white;
+
+}
+
+/* 👇 TASK CARDS (lightened) */
+
+body.dark .todo-item{
+
+  background:#252c3b;
+
+  border:1px solid #3a4354;
+
+  color:white;
+
+}
+
+body.dark .todo-item:hover{
+
+  background:#30384a;
+
+}
+
+/* Textbox while editing */
+
+body.dark .todo-item input[type=text]{
+
+  background:#343c4e;
+
+  color:white;
+
+  border:1px solid #555;
+
+}
+
+/* 👇 FIX ICONS */
+
+body.dark .icon-btn{
+
+  color:#ffffff;
+
+}
+
+body.dark .icon-btn:hover{
+
+  color:#ff6b6b;
+
+}
+
+/* checkbox */
+
+body.dark input[type="checkbox"]{
+
+  accent-color:#4cafef;
+
+}
+
+/* smooth */
+
+*{
+
+  transition:background .3s ease,color .3s ease,border .3s ease,box-shadow .3s ease;
+
+}
